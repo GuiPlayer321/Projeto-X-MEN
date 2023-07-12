@@ -1,0 +1,90 @@
+body{
+    font-family: 'Oxanium',cursive;
+    color: #fff;
+    background-color: #000;
+}
+
+body::before{
+    content: ""; /*cria um conteudo vazio*/
+    background-image: url(../imagens/bg-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1; /*joga os elementos para o fundo*/
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center; /*alinha na horizontal*/
+}
+
+.selecao-de-personagens{
+    display: flex; /*deixa um ao lado do outro*/
+    align-items: center;
+    gap: 1.875rem;
+    min-height: calc(100vh - 9.5rem); /*faz um calculo com o calc, pega o vh(tamanho do navegador)*/
+    justify-content: center;
+}
+
+.selecao-de-personagens .lista-de-personagens{ /*especifica um que ta dentro do outro*/
+    display: flex;
+    flex-wrap: wrap; /*quebra os elementos*/
+    gap: 1.875rem;
+    justify-content: center;
+}
+
+.selecao-de-personagens .personagens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width:36.5625rem;
+    gap: 1.563rem;
+}
+
+.selecao-de-personagens .personagens .titulo{
+    font-size: 1.25rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    border-bottom: 0.125rem solid #47f4ff;
+    width: 100%; /*porcentagem baseada no elemento pai*/
+    text-align: center;
+}
+
+.selecao-de-personagens .personagem
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.selecao-de-personagens .personagem.selecionado{
+    box-shadow: 0rem 0rem 1.5rem 0.313rem #0271f7;
+}
+
+.personagem-selecionado{
+    text-align: center;
+    max-height:  33.125rem;
+}
+
+.personagem-selecionado .personagem-grande{
+    width: 26.875rem;
+    height: 26.875rem;
+}
+
+.personagem-selecionado .nome-personagem{
+    font-size: 1.25rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    border-bottom: 0.125rem solid #47f4ff;
+}   
+
+.personagem-selecionado .descricao-personagem{
+    font-size: 1rem;
+    line-height: 1.375rem;
+    text-align: center;
+    margin-top: 1.125rem;
+    width: 26.25rem;
+}
